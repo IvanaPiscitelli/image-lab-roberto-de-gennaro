@@ -12,7 +12,7 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      <GridItem area="main" bg="yellow.300">
+      <GridItem area="main" bg="#D1CEC9" height="2000px">
         Main
       </GridItem>
       <GridItem area="footer" bg="green.300">

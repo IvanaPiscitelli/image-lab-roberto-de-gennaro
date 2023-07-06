@@ -13,6 +13,7 @@ const NavBarList = () => {
         </MenuList>
       </Menu>
       <Text>Location</Text>
+      <Text>My Works</Text>
       <Text>Contact Me</Text>
     </>
   );
