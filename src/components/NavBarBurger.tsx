@@ -1,7 +1,7 @@
 import { Box, HStack, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
 
 import { HiMenu } from "react-icons/hi";
-import logomen from "../assets/logo_menspire.webp";
+import logo from "../assets/ logo-salone.png";
 import IconMap from "./IconMap";
 import SocialMediaList from "./SocialMediaList";
 
@@ -10,7 +10,7 @@ const NavBarBurger = () => {
     <Box bg="black" position="fixed" width="100%">
       <HStack justifyContent="space-between" marginX="30px">
         <IconMap color="white" />
-        <Image src={logomen} alt="logo" fill="container" width="150px" height="38px" />
+        <Image src={logo} alt="logo" width="150px" height="85" />
 
         <Menu>
           <MenuButton
