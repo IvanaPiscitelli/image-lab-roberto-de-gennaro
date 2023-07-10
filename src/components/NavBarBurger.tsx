@@ -1,16 +1,30 @@
-import { Box, HStack, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  HStack,
+  IconButton,
+  Image,
+  Menu,
+  MenuButton,
+  MenuList,
+} from "@chakra-ui/react";
 
 import { HiMenu } from "react-icons/hi";
-import logo from "../assets/ logo-salone.png";
+// import logo from "../assets/ logo-salone.png";
+import logo from "../assets/logo-roberto.png";
 import IconMap from "./IconMap";
 import SocialMediaList from "./SocialMediaList";
 
 const NavBarBurger = () => {
   return (
     <Box bg="black" position="fixed" width="100%">
-      <HStack justifyContent="space-between" marginX="30px">
+      <HStack justifyContent="space-between" marginX="10px">
         <IconMap color="white" />
-        <Image src={logo} alt="logo" width="150px" height="85" />
+        <Image src={logo} alt="logo" width="130px" height="46px" marginLeft={1} padding="5px" />
 
         <Menu>
           <MenuButton
@@ -19,16 +33,65 @@ const NavBarBurger = () => {
             icon={<HiMenu style={{ fontSize: "28px" }} />}
             bg="black"
             color="white"
+            marginRight="23px"
           />
-          <MenuList bg="black" width="100vw">
-            <MenuItem bg="black">
-              <Text color="white">About Me</Text>
-            </MenuItem>
-            <MenuItem bg="black">
-              <Text color="white">Certifications</Text>
-            </MenuItem>
+          <MenuList bg="black" width="100vw" borderStyle="none">
+            <Accordion allowMultiple bg="black">
+              <AccordionItem color="white" borderStyle="none">
+                <h2>
+                  <AccordionButton color="white">
+                    <Box as="span" flex="1" textAlign="left">
+                      About Me
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4} color="white" fontSize="14px">
+                  Certifications
+                </AccordionPanel>
+              </AccordionItem>
 
-            <MenuItem bg="black">
+              <AccordionItem borderStyle="none">
+                <h2>
+                  <AccordionButton color="white">
+                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                      Location
+                    </Box>
+                  </AccordionButton>
+                </h2>
+              </AccordionItem>
+
+              <AccordionItem borderStyle="none">
+                <h2>
+                  <AccordionButton color="white">
+                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                      My Works
+                    </Box>
+                  </AccordionButton>
+                </h2>
+              </AccordionItem>
+
+              <AccordionItem borderStyle="none">
+                <h2>
+                  <AccordionButton color="white">
+                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                      Contact Me
+                    </Box>
+                  </AccordionButton>
+                </h2>
+              </AccordionItem>
+
+              <AccordionItem borderStyle="none">
+                <h2>
+                  <AccordionButton color="white">
+                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                      <SocialMediaList color="white" />
+                    </Box>
+                  </AccordionButton>
+                </h2>
+              </AccordionItem>
+            </Accordion>
+            {/* <MenuItem bg="black">
               <Text color="white">Location</Text>
             </MenuItem>
             <MenuItem bg="black">
@@ -39,7 +102,7 @@ const NavBarBurger = () => {
             </MenuItem>
             <MenuItem bg="black">
               <SocialMediaList color="white" />
-            </MenuItem>
+            </MenuItem> */}
           </MenuList>
         </Menu>
       </HStack>
