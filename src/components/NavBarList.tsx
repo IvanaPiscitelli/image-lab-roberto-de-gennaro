@@ -9,7 +9,7 @@ const NavBarList = () => {
           About Me
         </MenuButton>
         <MenuList>
-          <MenuItem>Certifications</MenuItem>
+          <MenuItem color={"black"}>Certifications</MenuItem>
         </MenuList>
       </Menu>
       <Text>Location</Text>

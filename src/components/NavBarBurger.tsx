@@ -5,6 +5,8 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  CloseButton,
+  Flex,
   HStack,
   IconButton,
   Image,
@@ -14,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 
 import { HiMenu } from "react-icons/hi";
-// import logo from "../assets/ logo-salone.png";
 import logo from "../assets/logo-roberto.png";
 import IconMap from "./IconMap";
 import SocialMediaList from "./SocialMediaList";
@@ -26,16 +27,17 @@ const NavBarBurger = () => {
         <IconMap color="white" />
         <Image src={logo} alt="logo" width="130px" height="46px" marginLeft={1} padding="5px" />
 
-        <Menu>
+        <Menu gutter={-1} strategy={"fixed"}>
           <MenuButton
             as={IconButton}
             aria-label="Options"
             icon={<HiMenu style={{ fontSize: "28px" }} />}
             bg="black"
             color="white"
-            marginRight="23px"
+            marginRight="15px"
           />
-          <MenuList bg="black" width="100vw" borderStyle="none">
+
+          <MenuList bg="black" width="100vw" borderStyle="none" borderRadius={0}>
             <Accordion allowMultiple bg="black">
               <AccordionItem color="white" borderStyle="none">
                 <h2>

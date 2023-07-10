@@ -16,9 +16,6 @@ const SocialMediaList = ({ color }: Props) => {
       <Link href="https://www.facebook.com/profile.php?id=100093828756736" isExternal>
         <Icon as={ImFacebook2} boxSize="20px" color={color} marginX="10px" marginTop="5px" />
       </Link>
-      {/* <Link href="https://wa.me/3292164908" isExternal>
-        <Icon as={FaWhatsapp} boxSize="20px" color={color} marginX="10px" marginTop="5px" />
-      </Link> */}
       <Link href="https://www.tiktok.com/@imagelab_rob_dg?_t=8dk3ihtnZMp" isExternal>
         <Icon as={FaTiktok} boxSize="20px" color={color} marginX="10px" marginTop="5px" />
       </Link>
