@@ -1,5 +1,6 @@
 import { Box, HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo-roberto.png";
+import logoBlack from "../assets/logo-roberto-black.png";
 import SocialMediaList from "./SocialMediaList";
 import IconMap from "./IconMap";
 import NavBarList from "./NavBarList";
@@ -22,7 +23,7 @@ const NavBar = () => {
       <HStack paddingX="30px" paddingY="12px" justifyContent="space-between">
         <IconMap color={colorIcon} />
 
-        <Image src={logo} alt="logo" width={{ md: "135px", lg: "150px" }} height={{ md: "45px", lg: "47px" }} />
+        <Image src={showNavBar ? logo : logoBlack} alt="logo" width={{ md: "135px", lg: "150px" }} height={{ md: "45px", lg: "47px" }} />
 
         <SocialMediaList color={colorIcon} />
       </HStack>

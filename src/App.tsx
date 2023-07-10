@@ -1,6 +1,7 @@
 import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import NavBarBurger from "./components/NavBarBurger";
+// import CookieBanner from "./components/CookieBanner";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <GridItem area="footer" bg="green.300">
         Footer
       </GridItem>
+      {/* Use only when we use ads software or login flow */}
+      {/* <CookieBanner /> */}
     </Grid>
   );
 }
