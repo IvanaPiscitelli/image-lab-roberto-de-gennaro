@@ -1,4 +1,4 @@
-import { Box, HStack, Image } from "@chakra-ui/react";
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo-roberto.png";
 import logoBlack from "../assets/logo-roberto-black.png";
 import SocialMediaList from "./SocialMediaList";
@@ -23,13 +23,24 @@ const NavBar = () => {
       <HStack paddingX="30px" paddingY="12px" justifyContent="space-between">
         <IconMap color={colorIcon} />
 
-        <Image src={showNavBar ? logo : logoBlack} alt="logo" width={{ md: "135px", lg: "150px" }} height={{ md: "45px", lg: "47px" }} />
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="">
+              <Image
+                src={showNavBar ? logo : logoBlack}
+                alt="logo"
+                width={{ md: "135px", lg: "150px" }}
+                height={{ md: "45px", lg: "47px" }}
+              />
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
 
         <SocialMediaList color={colorIcon} />
       </HStack>
 
       <HStack justifyContent="center" spacing={10} padding="10px" whiteSpace="nowrap">
-        <NavBarList />
+        <NavBarList color={showNavBar} />
       </HStack>
     </Box>
   );
