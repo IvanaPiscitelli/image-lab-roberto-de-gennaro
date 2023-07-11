@@ -1,0 +1,62 @@
+body {
+  font-size: 1rem;
+  font-family: "Work Sans", "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sfondo {
+  position: relative;
+  height: 70vh;
+}
+
+.sfondo-2 {
+  position: relative;
+  height: 50vh;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: absolute;
+  height: 70vh;
+  width: 90%;
+}
+
+.content-2 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: absolute;
+  height: 50vh;
+  width: 90%;
+}
+
+.content span.img-txt,
+.content-2 span.img-txt {
+  background-color: #d1cec9;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem;
+  letter-spacing: 10px;
+}
+h3 {
+  font-size: 1.71rem;
+  line-height: 1.3;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 0.5em 0;
+}
+.text-label {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.text-box {
+  text-align: center;
+  padding: 3rem 1rem;
+  text-align: justify;
+  padding: 50px 0;
+}

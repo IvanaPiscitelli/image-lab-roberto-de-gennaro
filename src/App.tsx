@@ -1,6 +1,9 @@
 import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import NavBarBurger from "./components/NavBarBurger";
+import ParallaBg1 from "./components/ParallaxBg1";
+import ParallaBg2 from "./components/ParallaxBg2";
+import TextBox from "./components/TextBox";
 // import CookieBanner from "./components/CookieBanner";
 
 function App() {
@@ -19,8 +22,14 @@ function App() {
           <NavBarBurger />
         </Show>
       </GridItem>
-      <GridItem area="main" bg="#D1CEC9" height="2000px">
-        Main
+      <GridItem area="main">
+        <ParallaBg1 />
+        <TextBox
+          headingChildren="Roberto De Gennaro"
+          textChildren="I'm pride ourselves in offering a high quality of service and that begins with appointment based bookings. Our online system allows you to pick a stylist and time that’s convenient for you, and if you can’t make it you can reschedule within 24 hours of your appointment."
+        />
+        <ParallaBg2 />
+        <TextBox headingChildren="My Best Works" />
       </GridItem>
       <GridItem area="footer" bg="green.300">
         Footer

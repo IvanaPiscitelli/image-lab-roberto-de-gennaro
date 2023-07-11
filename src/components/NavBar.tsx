@@ -19,6 +19,7 @@ const NavBar = () => {
       backgroundColor={showNavBar ? "black" : "#D1CEC9"}
       color={showNavBar ? "white" : "black"}
       transition={"background 0.2s ease-in-out, border-color 0.2s ease-in-out"}
+      zIndex={100}
     >
       <HStack paddingX="30px" paddingY="12px" justifyContent="space-between">
         <IconMap color={colorIcon} />
