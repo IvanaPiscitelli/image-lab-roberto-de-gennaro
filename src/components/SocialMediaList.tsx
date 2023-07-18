@@ -9,7 +9,7 @@ interface Props {
 
 const SocialMediaList = ({ color }: Props) => {
   return (
-    <HStack spacing={3}>
+    <HStack spacing={1}>
       <Link href="https://www.instagram.com/image_lab_roberto_de_gennaro/" isExternal>
         <Icon as={BsInstagram} boxSize="20px" color={color} marginX="10px" marginTop="5px" />
       </Link>

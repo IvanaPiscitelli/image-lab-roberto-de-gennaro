@@ -1,10 +1,12 @@
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, HStack, Image } from "@chakra-ui/react";
+import SocialMediaList from "./SocialMediaList";
+import LeftIcons from "./LeftIcons";
+import NavBarList from "./NavBarList";
+
+import useScrollPosition from "../hooks/useScrollPosition";
+
 import logo from "../assets/logo-roberto.png";
 import logoBlack from "../assets/logo-roberto-black.png";
-import SocialMediaList from "./SocialMediaList";
-import IconMap from "./IconMap";
-import NavBarList from "./NavBarList";
-import useScrollPosition from "../hooks/useScrollPosition";
 
 const NavBar = () => {
   const scrollPosition = useScrollPosition();
@@ -14,15 +16,15 @@ const NavBar = () => {
   return (
     <Box
       width="100%"
-      position={showNavBar ? "fixed" : "relative"}
+      position="fixed"
       boxShadow={showNavBar ? "lg" : "none"}
-      backgroundColor={showNavBar ? "black" : "#D1CEC9"}
+      backgroundColor={showNavBar ? "black" : "transparent"}
       color={showNavBar ? "white" : "black"}
       transition={"background 0.2s ease-in-out, border-color 0.2s ease-in-out"}
       zIndex={100}
     >
       <HStack paddingX="30px" paddingY="12px" justifyContent="space-between">
-        <IconMap color={colorIcon} />
+        <LeftIcons color={colorIcon} />
 
         <Breadcrumb>
           <BreadcrumbItem>

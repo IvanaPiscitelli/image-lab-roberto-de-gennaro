@@ -1,12 +1,41 @@
 import { Parallax } from "react-parallax";
-import sfondo2 from "../assets/prodotti.png";
+import { useBreakpointValue, Text } from "@chakra-ui/react";
 
-const ParallaBg2 = () => (
-  <Parallax className="sfondo-2" bgImage={sfondo2} strength={800}>
-    <div className="content-2">
-      <span className="img-txt">Con Prodotti di ultima tecnologia</span>
-    </div>
-  </Parallax>
-);
+import sfondoTest from "../assets/sfondo-2-test.webp";
+import sfondoTestMobile from "../assets/sfondo-2-test-mobile.webp";
 
-export default ParallaBg2;
+const ParallaxBg2 = () => {
+  const bgImage = useBreakpointValue({
+    base: sfondoTestMobile,
+    sm: sfondoTestMobile,
+    md: sfondoTest,
+    lg: sfondoTest,
+  });
+
+  const title = useBreakpointValue({
+    base: "1.5em",
+    md: "2.375em",
+  });
+
+  return (
+    <Parallax
+      className="sfondo-2"
+      bgImage={bgImage}
+      bgImageStyle={{
+        height: "850px",
+      }}
+      strength={800}
+    >
+      <div className="content-2">
+        <Text textAlign="right" marginLeft="35%" fontSize={title} lineHeight="1.4">
+          IMAGE LAB TOOLS
+        </Text>
+        <Text textAlign="right" marginLeft="45%" fontSize="1.25em" lineHeight="1.4">
+          CREATED BY BLA BLA BLA
+        </Text>
+      </div>
+    </Parallax>
+  );
+};
+
+export default ParallaxBg2;
