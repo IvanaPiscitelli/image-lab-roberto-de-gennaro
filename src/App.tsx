@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar";
 import NavBarBurger from "./components/NavBarBurger";
 import TextBox from "./components/TextBox";
 import Main from "./pages/Main";
+// import SlideHeroImage from "./components/SlideHeroImage";
+import Footer from "./components/Footer";
+import ImageSlider from "./components/ImageSlider";
 
 // import CookieBanner from "./components/CookieBanner";
 
@@ -10,8 +13,8 @@ function App() {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main" "section" "footer"`,
-        lg: `"nav nav" "main" "section" "footer"`,
+        base: `"nav" "main" "section" "works" "footer"`,
+        lg: `"nav nav" "main" "section" "works "footer"`,
       }}
     >
       <GridItem area="nav">
@@ -28,8 +31,12 @@ function App() {
       <GridItem area="section">
         <TextBox headingChildren="My Best Works" />
       </GridItem>
-      <GridItem area="footer" bg="green.300">
-        Footer
+      <GridItem area="works" justifyItems={"flex-end"}>
+        {/* <SlideHeroImage /> */}
+        <ImageSlider />
+      </GridItem>
+      <GridItem area="footer" bg="black" color="white">
+        <Footer />
       </GridItem>
       {/* Use only when we use ads software or login flow */}
       {/* <CookieBanner /> */}
