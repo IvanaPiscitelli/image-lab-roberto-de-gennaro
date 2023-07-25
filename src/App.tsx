@@ -31,7 +31,7 @@ function App() {
       <GridItem area="section">
         <TextBox headingChildren="My Best Works" />
       </GridItem>
-      <GridItem area="works" justifyItems={"flex-end"}>
+      <GridItem area="works">
         {/* <SlideHeroImage /> */}
         <ImageSlider />
       </GridItem>
