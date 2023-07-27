@@ -40,7 +40,7 @@ const ImageSlider = () => {
     <div className="container-slider">
       {imgSlider.map((img, index) => {
         return (
-          <div key={img} className={slideIndices.includes(index) ? "slide active-anim" : "slide"}>
+          <div key={index} className={slideIndices.includes(index) ? "slide active-anim" : "slide"}>
             <img src={img} className={index === slideIndices[0] ? "left" : "right"} />
           </div>
         );

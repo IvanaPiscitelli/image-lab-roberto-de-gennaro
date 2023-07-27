@@ -51,11 +51,6 @@ const ParallaxBg1 = () => {
     }),
   };
 
-  // 2em;
-  // margin-right: 3em;
-  // color: var(--chakra-colors-white);
-  // margin-top: 30em;
-
   const { bgImage, bgImagePosition, bgImageAttachment, bgImageHeight, bgImageSize } = bgImageConfig;
   const { marginLeft, marginRight, marginTop, color } = textConfig;
 
@@ -91,6 +86,7 @@ const ParallaxBg1 = () => {
             mt="5%"
             fontWeight={400}
             fontFamily="Quicksand"
+            color="black"
           >
             Award Winning Male Grooming
           </Text>

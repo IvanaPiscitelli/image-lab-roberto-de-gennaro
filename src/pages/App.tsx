@@ -1,15 +1,14 @@
 import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import NavBarBurger from "./components/NavBarBurger";
-import TextBox from "./components/TextBox";
-import Main from "./pages/Main";
-// import SlideHeroImage from "./components/SlideHeroImage";
-import Footer from "./components/Footer";
-import ImageSlider from "./components/ImageSlider";
+import NavBar from "../components/NavBar";
+import NavBarBurger from "../components/NavBarBurger";
+import TextBox from "../components/TextBox";
+import Main from "./Main";
+import Footer from "../components/Footer";
+import ImageSlider from "../components/ImageSlider";
 
 // import CookieBanner from "./components/CookieBanner";
 
-function App() {
+const App = () => {
   return (
     <Grid
       templateAreas={{
@@ -19,7 +18,7 @@ function App() {
     >
       <GridItem area="nav">
         <Hide below="sm">
-          <NavBar />
+          <NavBar backgroundColor="transparent" colorText="black" />
         </Hide>
         <Show below="sm">
           <NavBarBurger />
@@ -32,7 +31,6 @@ function App() {
         <TextBox headingChildren="My Best Works" />
       </GridItem>
       <GridItem area="works">
-        {/* <SlideHeroImage /> */}
         <ImageSlider />
       </GridItem>
       <GridItem area="footer" bg="black" color="white">
@@ -42,6 +40,6 @@ function App() {
       {/* <CookieBanner /> */}
     </Grid>
   );
-}
+};
 
 export default App;

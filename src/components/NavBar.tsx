@@ -8,18 +8,32 @@ import useScrollPosition from "../hooks/useScrollPosition";
 import logo from "../assets/logo-roberto.png";
 import logoBlack from "../assets/logo-roberto-black.png";
 
-const NavBar = () => {
+interface Props {
+  backgroundColor: string;
+  colorText: string;
+}
+
+const NavBar = ({ backgroundColor, colorText }: Props) => {
   const scrollPosition = useScrollPosition();
   const showNavBar = scrollPosition > 0 ? true : false;
-  const colorIcon = scrollPosition > 0 ? "white" : "black";
+  const colorIcon = scrollPosition > 0 ? "white" : colorText;
+  const displayBasedOnColor = (start: string, end: string): string => {
+    if (colorText === "white") {
+      return start;
+    } else if (showNavBar) {
+      return start;
+    } else {
+      return end;
+    }
+  };
 
   return (
     <Box
       width="100%"
       position="fixed"
       boxShadow={showNavBar ? "lg" : "none"}
-      backgroundColor={showNavBar ? "black" : "transparent"}
-      color={showNavBar ? "white" : "black"}
+      backgroundColor={showNavBar ? "black" : backgroundColor}
+      color={showNavBar ? "white" : colorText}
       transition={"background 0.2s ease-in-out, border-color 0.2s ease-in-out"}
       zIndex={100}
     >
@@ -28,9 +42,9 @@ const NavBar = () => {
 
         <Breadcrumb>
           <BreadcrumbItem>
-            <BreadcrumbLink href="">
+            <BreadcrumbLink href="/">
               <Image
-                src={showNavBar ? logo : logoBlack}
+                src={displayBasedOnColor(logo, logoBlack)}
                 alt="logo"
                 width={{ md: "135px", lg: "150px" }}
                 height={{ md: "45px", lg: "47px" }}
@@ -43,7 +57,7 @@ const NavBar = () => {
       </HStack>
 
       <HStack justifyContent="center" spacing={10} padding="10px" whiteSpace="nowrap">
-        <NavBarList color={showNavBar} />
+        <NavBarList color={displayBasedOnColor("white", colorText)} />
       </HStack>
     </Box>
   );

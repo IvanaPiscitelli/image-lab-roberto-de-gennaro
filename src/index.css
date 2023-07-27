@@ -1,3 +1,7 @@
+#root {
+  background-color: white;
+}
+
 body {
   font-size: 1rem;
   font-family: "Work Sans", "Quicksand", sans-serif;
@@ -17,6 +21,7 @@ body {
   position: absolute;
   height: 50vh;
   width: 90%;
+  color: black;
 }
 
 @media screen and (min-width: 280px) and (max-width: 767px) {
@@ -151,9 +156,5 @@ h3 {
 .container-footer {
   display: flex;
   justify-content: space-between;
-  /* display: flex;
-  align-items: center; */
   width: 100%;
-  /* justify-content: center;
-  gap: 17em; */
 }

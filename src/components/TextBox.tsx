@@ -13,6 +13,7 @@ const TextBox = ({ headingChildren, textChildren }: Props) => {
       alignItems="center"
       width="100%"
       padding={{ base: "35px 20px 35px 20px", md: "50px 0" }}
+      color="black"
     >
       <Heading fontWeight={400} textAlign="center" fontStyle="normal">
         {headingChildren}
