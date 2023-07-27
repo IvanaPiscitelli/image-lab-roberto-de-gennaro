@@ -1,9 +1,9 @@
 import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import NavBarBurger from "./components/NavBarBurger";
+import NavBar from "../components/NavBar";
+import NavBarBurger from "../components/NavBarBurger";
 // import CookieBanner from "./components/CookieBanner";
 
-function App() {
+const App = () => {
   return (
     <Grid
       templateAreas={{
@@ -13,7 +13,7 @@ function App() {
     >
       <GridItem area="nav">
         <Hide below="sm">
-          <NavBar />
+          <NavBar backgroundColor="transparent" colorText="black" />
         </Hide>
         <Show below="sm">
           <NavBarBurger />
@@ -29,6 +29,6 @@ function App() {
       {/* <CookieBanner /> */}
     </Grid>
   );
-}
+};
 
 export default App;
