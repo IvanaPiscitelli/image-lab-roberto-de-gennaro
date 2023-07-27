@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { Box, Flex, Text, Image, Stack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo-roberto.png";
 import SocialMediaList from "./SocialMediaList";
 
 const Footer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Box
       as="footer"
@@ -36,11 +42,11 @@ const Footer = () => {
             <Text fontSize="18px" fontWeight={800}>
               PAGES
             </Text>
-            <Text>About Me</Text>
-            <Text>Certifications</Text>
-            <Text>Location</Text>
-            <Text>My Works</Text>
-            <Text>Contact Me</Text>
+            <Link to="/about-me">About Me</Link>
+            <Link to="/certifications">Certifications</Link>
+            <Link to="/location">Location</Link>
+            <Link to="/my-works">My Works</Link>
+            <Link to="/contact-me">Contact Me</Link>
           </Stack>
         </Flex>
       </Flex>
