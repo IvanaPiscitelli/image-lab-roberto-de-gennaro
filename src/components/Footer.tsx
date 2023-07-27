@@ -6,8 +6,8 @@ import SocialMediaList from "./SocialMediaList";
 
 const Footer = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box
@@ -16,6 +16,7 @@ const Footer = () => {
       py="6"
       height={{ base: "50vh", md: "40vh" }}
       marginTop={{ base: "1.5em", md: "5em" }}
+      color="white"
     >
       <Flex
         direction={{ base: "column", md: "row" }}

@@ -33,7 +33,7 @@ const App = () => {
       <GridItem area="works">
         <ImageSlider />
       </GridItem>
-      <GridItem area="footer" bg="black" color="white">
+      <GridItem area="footer" bg="black">
         <Footer />
       </GridItem>
       {/* Use only when we use ads software or login flow */}
