@@ -4,6 +4,7 @@ import secondImg from "../assets/dummy-user.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import NavBar from "../components/NavBar";
 import NavBarBurger from "../components/NavBarBurger";
+import Footer from "../components/Footer";
 
 const AboutMe = () => {
   return (
@@ -22,8 +23,8 @@ const AboutMe = () => {
         </Show>
       </GridItem>
       <GridItem area="main" bg="white" color="black">
-        <Box style={{ paddingTop: { base: "100px", md: "300px" }, maxWidth: "1170px", marginLeft: "auto", marginRight: "auto" }}>
-          <HStack style={{ display: "flex", flexWrap: "wrap", padding: "10px 15px" }}>
+        <div id="first-div-main" style={{ paddingTop: "200px", maxWidth: "1170px", marginLeft: "auto", marginRight: "auto" }}>
+          <HStack style={{ display: "flex", padding: "10px 15px" }}>
             <Box style={{ maxWidth: "50%", flexBasis: "50%", padding: "15px" }}>
               <h3 style={{ fontSize: "15px", fontWeight: 700, marginTop: "0", marginBottom: "10px", letterSpacing: "2px" }}>OUR STORY</h3>
               <p style={{ fontSize: "50px", fontWeight: 700, marginTop: "0", marginBottom: "0" }}>AWARD WINNING MALE IMAGE GROOMING</p>
@@ -32,7 +33,7 @@ const AboutMe = () => {
               <p style={{ fontSize: "15px", fontWeight: 400, marginTop: "0", marginBottom: "0", lineHeight: "1.5em", textAlign: "left" }}>IMAGE LAB presents the revolutionary transition between precision barbering and contemporary hairdressing. A fusion of technical and artistic skills with a commitment to bridge the gap between the traditional barbershop and the modern hair business.</p>
             </Box>
           </HStack>
-        </Box>
+        </div>
         <Box style={{ paddingTop: "20px", paddingBottom: "0", maxWidth: "1170px", marginLeft: "auto", marginRight: "auto" }}>
           <div style={{ padding: "0 15px" }}>
             <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", marginBottom: "90px", paddingTop: "30px" }}>
@@ -52,7 +53,7 @@ const AboutMe = () => {
             </div>
             <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
               <div style={{ maxWidth: "50%", flexBasis: "50%", padding: "15px" }}>
-                <h3 style={{ fontWeight: 700, letterSpacing: "2px", marginTop: 0, marginBottom: "10px", fontSize: "15px" }}>ROBERTO DE GENNARO</h3>
+                <h3 style={{ fontWeight: 700, letterSpacing: "2px", marginTop: 0, marginBottom: "10px", fontSize: "15px", textAlign: "start" }}>ROBERTO DE GENNARO</h3>
                 <p style={{ fontWeight: 600, letterSpacing: "2px", marginTop: 0, marginBottom: "10px", fontSize: "18px" }}>Hair Designer – Crotone</p>
                 <p style={{ fontSize: "15px" }}>With an infectious character and a remarkable work rate Josh Lamonaca has become a world renowned figure revolutionising a system for men’s hair education.<br /><br />
                   Josh has featured in over 25 countries sharing the MENSPIRE philosophy at some of the most prestigious events in the world, with audiences rising above 3000 people.<br /><br />
@@ -73,8 +74,8 @@ const AboutMe = () => {
           </a>
         </Box>
       </GridItem>
-      <GridItem area="footer" bg="green.300">
-        Footer
+      <GridItem area="footer" bg="black">
+        <Footer />
       </GridItem>
     </Grid>
   );
