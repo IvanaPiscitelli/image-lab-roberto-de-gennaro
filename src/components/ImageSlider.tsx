@@ -10,31 +10,38 @@ import capelli4 from "../assets/capelli4.png";
 import "../index.css";
 
 const ImageSlider = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-  const imgSlider = [capelli0, capelli1, capelli2, capelli3, capelli4];
+  const [slideIndices, setSlideIndices] = useState<number[]>([0, 1]);
+  const imgSlider = [
+    capelli0,
+    capelli0,
+    capelli1,
+    capelli1,
+    capelli2,
+    capelli2,
+    capelli3,
+    capelli3,
+    capelli4,
+    capelli4,
+  ];
 
   const nextSlide = () => {
-    if (slideIndex !== imgSlider.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === imgSlider.length) {
-      setSlideIndex(1);
-    }
+    const newIndex1 = (slideIndices[0] + 2) % imgSlider.length;
+    const newIndex2 = (slideIndices[1] + 2) % imgSlider.length;
+    setSlideIndices([newIndex1, newIndex2]);
   };
 
   const prevSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(imgSlider.length);
-    }
+    const newIndex1 = (slideIndices[0] - 2 + imgSlider.length) % imgSlider.length;
+    const newIndex2 = (slideIndices[1] - 2 + imgSlider.length) % imgSlider.length;
+    setSlideIndices([newIndex1, newIndex2]);
   };
 
   return (
     <div className="container-slider">
       {imgSlider.map((img, index) => {
         return (
-          <div key={img} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-            <img src={img} />
+          <div key={img} className={slideIndices.includes(index) ? "slide active-anim" : "slide"}>
+            <img src={img} className={index === slideIndices[0] ? "left" : "right"} />
           </div>
         );
       })}

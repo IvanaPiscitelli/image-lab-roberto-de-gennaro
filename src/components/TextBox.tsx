@@ -12,14 +12,16 @@ const TextBox = ({ headingChildren, textChildren }: Props) => {
       flexDirection="column"
       alignItems="center"
       width="100%"
-      padding={{ base: "35px 20px 0px 20px", md: "50px 0" }}
+      padding={{ base: "35px 20px 35px 20px", md: "50px 0" }}
     >
       <Heading fontWeight={400} textAlign="center" fontStyle="normal">
         {headingChildren}
       </Heading>
-      <Text fontSize="1rem" textAlign="center" margin="20px auto">
-        {textChildren}
-      </Text>
+      {textChildren && (
+        <Text fontSize="1rem" textAlign="center" margin="20px auto">
+          {textChildren}
+        </Text>
+      )}
     </Container>
   );
 };
