@@ -15,17 +15,18 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import logo from "../assets/logo-roberto.png";
-import IconMap from "./IconMap";
+import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
+
+import logo from "../assets/logo-roberto.png";
 
 const NavBarBurger = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box bg="black" position="fixed" width="100%">
+    <Box bg="black" position="fixed" width="100%" zIndex={100}>
       <HStack justifyContent="space-between" marginX="10px">
-        <IconMap color="white" />
+        <LeftIcons color="white" />
         <Image src={logo} alt="logo" width="130px" height="46px" marginLeft={1} padding="5px" />
 
         <Menu strategy={"fixed"} gutter={-1}>
