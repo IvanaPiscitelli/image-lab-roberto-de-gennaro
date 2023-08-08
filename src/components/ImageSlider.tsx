@@ -1,28 +1,18 @@
 import { useState } from "react";
 import BtnSlider from "./ButtonSlider";
 
-import capelli0 from "../assets/capelli0.png";
-import capelli1 from "../assets/capelli1.png";
-import capelli2 from "../assets/capelli2.png";
-import capelli3 from "../assets/capelli3.png";
-import capelli4 from "../assets/capelli4.png";
-
+import balayage from "../assets/balayage.jpeg";
+import taglioUomo0 from "../assets/taglio-uomo0.jpeg";
+import taglioUomo1 from "../assets/taglio-uomo1.jpeg";
+import taglioUomo2 from "../assets/taglio-uomo2.jpeg";
+import taglioUomo3 from "../assets/taglio-uomo3.jpeg";
+import taglioUomo4 from "../assets/taglio-uomo4.jpeg";
+import taglioUomo5 from "../assets/taglio-uomo5.jpeg";
 import "../index.css";
 
 const ImageSlider = () => {
   const [slideIndices, setSlideIndices] = useState<number[]>([0, 1]);
-  const imgSlider = [
-    capelli0,
-    capelli0,
-    capelli1,
-    capelli1,
-    capelli2,
-    capelli2,
-    capelli3,
-    capelli3,
-    capelli4,
-    capelli4,
-  ];
+  const imgSlider = [balayage, taglioUomo0, taglioUomo1, taglioUomo2, taglioUomo3, taglioUomo4, taglioUomo5];
 
   const nextSlide = () => {
     const newIndex1 = (slideIndices[0] + 2) % imgSlider.length;
