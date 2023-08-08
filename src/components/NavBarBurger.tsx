@@ -91,7 +91,7 @@ const NavBarBurger = () => {
                 <h2>
                   <AccordionButton color="white">
                     <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
-                      Contact Me
+                      Price List
                     </Box>
                   </AccordionButton>
                 </h2>
