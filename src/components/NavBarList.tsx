@@ -35,13 +35,13 @@ const NavBarList = ({ color }: Props) => {
           </MenuItem>
         </MenuList>
       </Menu>
-      <Text padding="10px" onClick={() => navigate("/location")}>
+      <Text padding="10px" onClick={() => navigate("/location")} cursor="pointer">
         Location
       </Text>
-      <Text padding="10px" onClick={() => navigate("/my-works")}>
+      <Text padding="10px" onClick={() => navigate("/my-works")} cursor="pointer">
         My Works
       </Text>
-      <Text padding="10px" onClick={() => navigate("/price-list")}>
+      <Text padding="10px" onClick={() => navigate("/price-list")} cursor="pointer">
         Price List
       </Text>
     </>
