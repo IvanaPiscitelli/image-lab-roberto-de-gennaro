@@ -19,9 +19,11 @@ import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
 
 import logo from "../assets/logo-roberto.png";
+import { useNavigate } from "react-router-dom";
 
 const NavBarBurger = () => {
   const { isOpen, onToggle } = useDisclosure();
+  const navigate = useNavigate();
 
   return (
     <Box bg="black" position="fixed" width="100%" zIndex={100}>
@@ -56,13 +58,13 @@ const NavBarBurger = () => {
               <AccordionItem color="white" borderStyle="none">
                 <h2>
                   <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left">
+                    <Box as="span" flex="1" textAlign="left" onClick={() => navigate("/about-me")}>
                       About Me
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} color="white" fontSize="14px">
+                <AccordionPanel pb={4} color="white" fontSize="14px" onClick={() => navigate("/certification")}>
                   Certifications
                 </AccordionPanel>
               </AccordionItem>
@@ -70,7 +72,14 @@ const NavBarBurger = () => {
               <AccordionItem borderStyle="none">
                 <h2>
                   <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      borderStyle="none"
+                      fontSize="17px"
+                      onClick={() => navigate("/location")}
+                    >
                       Location
                     </Box>
                   </AccordionButton>
@@ -80,7 +89,14 @@ const NavBarBurger = () => {
               <AccordionItem borderStyle="none">
                 <h2>
                   <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      borderStyle="none"
+                      fontSize="17px"
+                      onClick={() => navigate("/my-works")}
+                    >
                       My Works
                     </Box>
                   </AccordionButton>
@@ -90,7 +106,14 @@ const NavBarBurger = () => {
               <AccordionItem borderStyle="none">
                 <h2>
                   <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      borderStyle="none"
+                      fontSize="17px"
+                      onClick={() => navigate("/price-list")}
+                    >
                       Price List
                     </Box>
                   </AccordionButton>
