@@ -1,37 +1,37 @@
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
   HStack,
   IconButton,
   Image,
   Menu,
   MenuButton,
+  MenuItem,
   MenuList,
   ScaleFade,
   useDisclosure,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
+
 import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
 
 import logo from "../assets/logo-roberto.png";
-import { useNavigate } from "react-router-dom";
 
 const NavBarBurger = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
   const navigate = useNavigate();
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    onClose();
+  };
 
   return (
-    <Box bg="black" position="fixed" width="100%" zIndex={100}>
-      <HStack justifyContent="space-between" marginX="10px">
+    <Box bg="black" position="fixed" w="100%" zIndex={100}>
+      <HStack justifyContent="space-between" mx="10px">
         <LeftIcons color="white" />
-        <Image src={logo} alt="logo" width="130px" height="46px" marginLeft={1} padding="5px" />
-
-        <Menu strategy={"fixed"} gutter={-1}>
+        <Image src={logo} alt="logo" w="130px" h="46px" ml={1} p="5px" onClick={() => handleNavigate("/")} />
+        <Menu strategy="fixed" gutter={-1} onClose={onClose}>
           <MenuButton
             as={IconButton}
             aria-label="Toggle"
@@ -48,88 +48,82 @@ const NavBarBurger = () => {
             }
             bg="black"
             color="white"
-            marginRight="15px"
+            mr="15px"
             colorScheme="transparent"
             onClick={() => onToggle()}
           />
 
-          <MenuList bg="black" width="100vw" borderStyle="none">
-            <Accordion allowMultiple bg="black">
-              <AccordionItem color="white" borderStyle="none">
-                <h2>
-                  <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left" onClick={() => navigate("/about-me")}>
-                      About Me
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4} color="white" fontSize="14px" onClick={() => navigate("/certification")}>
-                  Certifications
-                </AccordionPanel>
-              </AccordionItem>
+          <MenuList bg="black" w="100vw" borderStyle="none">
+            <MenuItem bg="black" color="white">
+              <Box
+                as="span"
+                flex={1}
+                textAlign="left"
+                borderStyle="none"
+                fontSize="17px"
+                onClick={() => handleNavigate("/about-me")}
+              >
+                About Me
+              </Box>
+            </MenuItem>
 
-              <AccordionItem borderStyle="none">
-                <h2>
-                  <AccordionButton color="white">
-                    <Box
-                      as="span"
-                      flex="1"
-                      textAlign="left"
-                      borderStyle="none"
-                      fontSize="17px"
-                      onClick={() => navigate("/location")}
-                    >
-                      Location
-                    </Box>
-                  </AccordionButton>
-                </h2>
-              </AccordionItem>
+            <MenuItem bg="black" color="white">
+              <Box
+                as="span"
+                flex={1}
+                textAlign="left"
+                borderStyle="none"
+                fontSize="17px"
+                onClick={() => handleNavigate("/certifications")}
+              >
+                Certifications
+              </Box>
+            </MenuItem>
 
-              <AccordionItem borderStyle="none">
-                <h2>
-                  <AccordionButton color="white">
-                    <Box
-                      as="span"
-                      flex="1"
-                      textAlign="left"
-                      borderStyle="none"
-                      fontSize="17px"
-                      onClick={() => navigate("/my-works")}
-                    >
-                      My Works
-                    </Box>
-                  </AccordionButton>
-                </h2>
-              </AccordionItem>
+            <MenuItem bg="black" color="white">
+              <Box
+                as="span"
+                flex={1}
+                textAlign="left"
+                borderStyle="none"
+                fontSize="17px"
+                onClick={() => handleNavigate("/location")}
+              >
+                Location
+              </Box>
+            </MenuItem>
 
-              <AccordionItem borderStyle="none">
-                <h2>
-                  <AccordionButton color="white">
-                    <Box
-                      as="span"
-                      flex="1"
-                      textAlign="left"
-                      borderStyle="none"
-                      fontSize="17px"
-                      onClick={() => navigate("/price-list")}
-                    >
-                      Price List
-                    </Box>
-                  </AccordionButton>
-                </h2>
-              </AccordionItem>
+            <MenuItem bg="black" color="white">
+              <Box
+                as="span"
+                flex={1}
+                textAlign="left"
+                borderStyle="none"
+                fontSize="17px"
+                onClick={() => handleNavigate("/my-works")}
+              >
+                My Works
+              </Box>
+            </MenuItem>
 
-              <AccordionItem borderStyle="none">
-                <h2>
-                  <AccordionButton color="white">
-                    <Box as="span" flex="1" textAlign="left" borderStyle="none" fontSize="17px">
-                      <SocialMediaList color="white" />
-                    </Box>
-                  </AccordionButton>
-                </h2>
-              </AccordionItem>
-            </Accordion>
+            <MenuItem bg="black" color="white">
+              <Box
+                as="span"
+                flex={1}
+                textAlign="left"
+                borderStyle="none"
+                fontSize="17px"
+                onClick={() => handleNavigate("/price-list")}
+              >
+                Price List
+              </Box>
+            </MenuItem>
+
+            <MenuItem bg="black" color="white">
+              <Box as="span" flex={1} textAlign="left" borderStyle="none" fontSize="17px">
+                <SocialMediaList color="white" />
+              </Box>
+            </MenuItem>
           </MenuList>
         </Menu>
       </HStack>
