@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./pages/App";
 import AboutMe from "./pages/AboutMe";
-import PriceList from "./components/PriceList";
+import PriceList from "./pages/PriceList";
+import NotFound from "./pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -15,5 +16,9 @@ export const router = createBrowserRouter([
   {
     path: "/price-list",
     element: PriceList(),
+  },
+  {
+    path: "*",
+    element: NotFound(),
   },
 ]);
