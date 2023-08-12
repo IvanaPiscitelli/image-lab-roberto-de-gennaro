@@ -11,15 +11,15 @@ const TextBox = ({ headingChildren, textChildren }: Props) => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      width="100%"
-      padding={{ base: "35px 20px 35px 20px", md: "50px 0" }}
+      w="100%"
+      p={{ base: "35px 20px 35px 20px", md: "50px 0" }}
       color="black"
     >
       <Heading fontWeight={400} textAlign="center" fontStyle="normal">
         {headingChildren}
       </Heading>
       {textChildren && (
-        <Text fontSize="1rem" textAlign="center" margin="20px auto">
+        <Text fontSize="1rem" textAlign="center" m="20px auto">
           {textChildren}
         </Text>
       )}

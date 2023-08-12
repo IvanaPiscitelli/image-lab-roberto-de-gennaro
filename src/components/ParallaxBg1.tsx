@@ -1,4 +1,4 @@
-import { Flex, Show, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Show, Text, useBreakpointValue } from "@chakra-ui/react";
 
 import sfondoTest from "../assets/sfondo-test.webp";
 import sfondoTestMobile from "../assets/sfondo-test-mobile.webp";
@@ -33,15 +33,15 @@ const ParallaxBg1 = () => {
   };
 
   const textConfig = {
-    marginLeft: useBreakpointValue({
+    ml: useBreakpointValue({
       base: "2em",
       md: "45%",
     }),
-    marginRight: useBreakpointValue({
+    mr: useBreakpointValue({
       base: "3em",
       md: "8%",
     }),
-    marginTop: useBreakpointValue({
+    mt: useBreakpointValue({
       base: "30em",
       md: "",
     }),
@@ -52,25 +52,23 @@ const ParallaxBg1 = () => {
   };
 
   const { bgImage, bgImagePosition, bgImageAttachment, bgImageHeight, bgImageSize } = bgImageConfig;
-  const { marginLeft, marginRight, marginTop, color } = textConfig;
+  const { ml, mr, mt, color } = textConfig;
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: bgImagePosition,
-        backgroundAttachment: bgImageAttachment,
-        backgroundSize: bgImageSize,
-        height: bgImageHeight,
-        position: "relative",
-      }}
+    <Box
+      bgImage={`url(${bgImage})`}
+      bgRepeat="no-repeat"
+      bgPosition={bgImagePosition}
+      bgAttachment={bgImageAttachment}
+      bgSize={bgImageSize}
+      h={bgImageHeight}
+      position="relative"
     >
       <Flex
         position="absolute"
         top={0}
-        height="100%"
-        width="100%"
+        h="100%"
+        w="100%"
         justifyContent="center"
         flexDirection="column"
         alignItems="flex-end"
@@ -95,15 +93,15 @@ const ParallaxBg1 = () => {
           textAlign={{ base: "center", md: "right" }}
           fontSize="1.25rem"
           lineHeight="1.4"
-          ml={marginLeft}
-          mr={marginRight}
+          ml={ml}
+          mr={mr}
+          mt={mt}
           color={color}
-          marginTop={marginTop}
         >
           IMAGE LAB presents the revolutionary transition between precision barbering and contemporary hairdressing.
         </Text>
       </Flex>
-    </div>
+    </Box>
   );
 };
 
