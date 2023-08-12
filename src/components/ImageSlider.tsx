@@ -8,7 +8,7 @@ import taglioUomo2 from "../assets/taglio-uomo2.jpeg";
 import taglioUomo3 from "../assets/taglio-uomo3.jpeg";
 import taglioUomo4 from "../assets/taglio-uomo4.jpeg";
 import taglioUomo5 from "../assets/taglio-uomo5.jpeg";
-import "../index.css";
+import "../styles/index.css";
 
 const ImageSlider = () => {
   const [slideIndices, setSlideIndices] = useState<number[]>([0, 1]);

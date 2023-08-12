@@ -1,6 +1,6 @@
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
-import "../index.css";
+import "../styles/index.css";
 
 interface Props {
   direction: string;

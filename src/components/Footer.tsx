@@ -14,8 +14,8 @@ const Footer = () => {
       as="footer"
       role="contentinfo"
       py="6"
-      height={{ base: "50vh", md: "40vh" }}
-      marginTop={{ base: "1.5em", md: "5em" }}
+      h={{ base: "50vh", md: "40vh" }}
+      mt={{ base: "1.5em", md: "5em" }}
       color="white"
     >
       <Flex
@@ -25,13 +25,7 @@ const Footer = () => {
         px={{ base: "6", md: "8" }}
         align="flex-start"
       >
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          align="flex-start"
-          justify="space-evenly"
-          width="full"
-          wrap="wrap"
-        >
+        <Flex direction={{ base: "column", md: "row" }} align="flex-start" justify="space-evenly" w="full" wrap="wrap">
           <Image src={logo} alt="logo" />
           <Stack direction="column" mt={{ base: "5", md: "0" }}>
             <Text fontSize="18px" fontWeight={800}>
