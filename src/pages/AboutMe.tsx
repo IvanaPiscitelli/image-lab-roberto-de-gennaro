@@ -25,7 +25,7 @@ const AboutMe = () => {
         </Show>
       </GridItem>
       <GridItem area="main" bg="white" color="black">
-        <Box pt={{ base: "50px", md: "150px", lg: "200px" }} maxWidth={{ base: "100vw", lg: "1170px" }} mt="auto">
+        <Box pt={{ base: "50px", md: "150px", lg: "200px" }} maxWidth={{ base: "100vw", lg: "1170px" }} mx="auto">
           <Box display="flex" flexDirection={{ base: "column", md: "row" }} p="10px" alignItems="center">
             <Box flex={1} p="15px" textAlign="center">
               <Box fontSize="15px" fontWeight={700} mt="0px" mb="10px" letterSpacing="2px">
