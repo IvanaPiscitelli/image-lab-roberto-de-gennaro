@@ -25,7 +25,7 @@ const AboutMe = () => {
         </Show>
       </GridItem>
       <GridItem area="main" bg="white" color="black">
-        <Box pt={{ base: "50px", lg: "200px" }} maxWidth={{ base: "100vw", lg: "1170px" }} mt="auto">
+        <Box pt={{ base: "50px", md: "150px", lg: "200px" }} maxWidth={{ base: "100vw", lg: "1170px" }} mt="auto">
           <Box display="flex" flexDirection={{ base: "column", md: "row" }} p="10px" alignItems="center">
             <Box flex={1} p="15px" textAlign="center">
               <Box fontSize="15px" fontWeight={700} mt="0px" mb="10px" letterSpacing="2px">
@@ -112,7 +112,7 @@ const AboutMe = () => {
                 >
                   Hair Designer – Crotone
                 </Box>
-                <Box p="15px" textAlign={{ base: "center", md: "left" }}>
+                <Box textAlign={{ base: "center", md: "left" }}>
                   With an infectious character and a remarkable work rate Josh Lamonaca has become a world renowned
                   figure revolutionising a system for men’s hair education.
                   <br />
@@ -155,7 +155,13 @@ const AboutMe = () => {
         </Box>
         <Box mx="auto" maxWidth={{ base: "100vw", md: "1170px" }}>
           <Link href="/" p="50px 15px" display="flex" justifyContent="center" alignItems="center" alignContent="center">
-            <Box textAlign="center" fontSize="50px" fontWeight={700} fontFamily="Quicksand" mr="30px">
+            <Box
+              textAlign="center"
+              fontSize="50px"
+              fontWeight={700}
+              fontFamily="Quicksand"
+              mr={{ base: "0px", md: "30px" }}
+            >
               Back To Homepage
             </Box>
             <FaLongArrowAltRight size={48} />

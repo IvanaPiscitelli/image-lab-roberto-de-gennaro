@@ -20,14 +20,14 @@ const ParallaxBg1 = () => {
       md: "fixed",
     }),
     bgImageHeight: useBreakpointValue({
-      base: "100vh",
+      base: "110vh",
       md: "56vh",
       lg: "73vh",
       xl: "97vh",
       "2xl": "100vh",
     }),
     bgImageSize: useBreakpointValue({
-      base: "auto 100%",
+      base: "120vw auto",
       md: "110% auto",
     }),
   };
@@ -67,7 +67,7 @@ const ParallaxBg1 = () => {
       <Flex
         position="absolute"
         top={0}
-        h="100%"
+        h="88%"
         w="100%"
         justifyContent="center"
         flexDirection="column"
