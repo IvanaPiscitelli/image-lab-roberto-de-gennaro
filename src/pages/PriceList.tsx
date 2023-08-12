@@ -4,7 +4,7 @@ import logo from "../assets/logo-roberto.png";
 
 const PriceList = () => {
   return (
-    <VStack bg="black" color="white" height="100%" pb="100px">
+    <VStack bg="black" color="white" h="100%" pb="100px">
       <Breadcrumb my="7px">
         <BreadcrumbItem>
           <BreadcrumbLink href="/">
@@ -17,7 +17,7 @@ const PriceList = () => {
       <h1>
         {dummyPriceList.map((person) => {
           return (
-            <VStack>
+            <VStack key={person.name}>
               <Heading mt={5}>{person.name}</Heading>
               <Box textAlign="center">
                 {person.cuts.map((cut) => {
