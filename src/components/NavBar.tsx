@@ -61,7 +61,7 @@ const NavBar = ({ backgroundColor, colorText }: Props) => {
       </HStack>
 
       <HStack justifyContent="center" spacing={10} p="10px" whiteSpace="nowrap">
-        <NavBarList color={displayBasedOnColor("white", colorText)} />
+        <NavBarList />
       </HStack>
     </Box>
   );
