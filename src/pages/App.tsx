@@ -1,10 +1,11 @@
 import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import NavBarBurger from "../components/NavBarBurger";
-import TextBox from "../components/TextBox";
+
 import Main from "./Main";
 import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
+import ShowBestWorks from "../components/ShowBestWorks";
 
 // import CookieBanner from "./components/CookieBanner";
 
@@ -28,7 +29,7 @@ const App = () => {
         <Main />
       </GridItem>
       <GridItem area="section">
-        <TextBox headingChildren="My Best Works" />
+        <ShowBestWorks />
       </GridItem>
       <GridItem area="works">
         <ImageSlider />

@@ -3,8 +3,10 @@ import { Box, Flex, Text, Image, Stack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-roberto.png";
 import SocialMediaList from "./SocialMediaList";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,19 +31,17 @@ const Footer = () => {
           <Image src={logo} alt="logo" />
           <Stack direction="column" mt={{ base: "5", md: "0" }}>
             <Text fontSize="18px" fontWeight={800}>
-              FOLLOW US
+              {t("followUs")}
             </Text>
             <SocialMediaList color="white" />
           </Stack>
           <Stack direction="column" mt={{ base: "5", md: "0" }}>
             <Text fontSize="18px" fontWeight={800}>
-              PAGES
+              {t("pages")}
             </Text>
-            <Link to="/about-me">About Me</Link>
-            <Link to="/certifications">Certifications</Link>
-            <Link to="/location">Location</Link>
-            <Link to="/my-works">My Works</Link>
-            <Link to="/contact-me">Contact Me</Link>
+            <Link to="/about-me"> {t("aboutMe")}</Link>
+            <Link to="/location"> {t("location")}</Link>
+            <Link to="/price-list"> {t("priceList")}</Link>
           </Stack>
         </Flex>
       </Flex>

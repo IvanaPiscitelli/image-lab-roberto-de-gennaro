@@ -17,8 +17,12 @@ import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
 
 import logo from "../assets/logo-roberto.png";
+import SwitchLang from "./SwitchLang";
+import { useTranslation } from "react-i18next";
 
 const NavBarBurger = () => {
+  const { t } = useTranslation();
+
   const { isOpen, onToggle, onClose } = useDisclosure();
   const navigate = useNavigate();
   const handleNavigate = (path: string) => {
@@ -63,20 +67,7 @@ const NavBarBurger = () => {
                 fontSize="17px"
                 onClick={() => handleNavigate("/about-me")}
               >
-                About Me
-              </Box>
-            </MenuItem>
-
-            <MenuItem bg="black" color="white">
-              <Box
-                as="span"
-                flex={1}
-                textAlign="left"
-                borderStyle="none"
-                fontSize="17px"
-                onClick={() => handleNavigate("/certifications")}
-              >
-                Certifications
+                {t("aboutMe")}
               </Box>
             </MenuItem>
 
@@ -89,20 +80,7 @@ const NavBarBurger = () => {
                 fontSize="17px"
                 onClick={() => handleNavigate("/location")}
               >
-                Location
-              </Box>
-            </MenuItem>
-
-            <MenuItem bg="black" color="white">
-              <Box
-                as="span"
-                flex={1}
-                textAlign="left"
-                borderStyle="none"
-                fontSize="17px"
-                onClick={() => handleNavigate("/my-works")}
-              >
-                My Works
+                {t("location")}
               </Box>
             </MenuItem>
 
@@ -115,14 +93,19 @@ const NavBarBurger = () => {
                 fontSize="17px"
                 onClick={() => handleNavigate("/price-list")}
               >
-                Price List
+                {t("priceList")}
               </Box>
             </MenuItem>
 
             <MenuItem bg="black" color="white">
-              <Box as="span" flex={1} textAlign="left" borderStyle="none" fontSize="17px">
-                <SocialMediaList color="white" />
-              </Box>
+              <HStack justifyContent="space-between" w="100%">
+                <Box textAlign="left" borderStyle="none" fontSize="17px">
+                  <SocialMediaList color="white" />
+                </Box>
+                <Box textAlign="left" borderStyle="none" fontSize="17px">
+                  <SwitchLang />
+                </Box>
+              </HStack>
             </MenuItem>
           </MenuList>
         </Menu>

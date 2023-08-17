@@ -3,8 +3,11 @@ import { useBreakpointValue, Text } from "@chakra-ui/react";
 
 import productsWhite from "../assets/productsWhite.png";
 import mobileProducts from "../assets/mobile-products.png";
+import { useTranslation } from "react-i18next";
 
 const ParallaxBg2 = () => {
+  const { t } = useTranslation();
+
   const bgImage = useBreakpointValue({
     base: mobileProducts,
     sm: mobileProducts,
@@ -49,10 +52,10 @@ const ParallaxBg2 = () => {
           ml={ml}
           mr={mr}
         >
-          IMAGE LAB TOOLS
+          {t("titleProducts")}
         </Text>
         <Text textAlign="right" ml={ml} mr={mr} fontSize="1.25em" lineHeight="1.4">
-          By Parlux DIGITALYON
+          {t("subTitleProducts")}
         </Text>
       </div>
     </Parallax>

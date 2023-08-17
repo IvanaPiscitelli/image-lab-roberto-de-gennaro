@@ -2,8 +2,11 @@ import { Box, Flex, Show, Text, useBreakpointValue } from "@chakra-ui/react";
 
 import sfondoTest from "../assets/sfondo-test.webp";
 import sfondoTestMobile from "../assets/sfondo-test-mobile.webp";
+import { useTranslation } from "react-i18next";
 
 const ParallaxBg1 = () => {
+  const { t } = useTranslation();
+
   const bgImageConfig = {
     bgImage: useBreakpointValue({
       base: sfondoTestMobile,
@@ -81,12 +84,12 @@ const ParallaxBg1 = () => {
             ml="45%"
             mr="8%"
             mb="0.5em"
-            mt="5%"
+            mt="15%"
             fontWeight={400}
             fontFamily="Quicksand"
             color="black"
           >
-            Award Winning Male Grooming
+            {t("titleHome")}
           </Text>
         </Show>
         <Text
@@ -98,7 +101,7 @@ const ParallaxBg1 = () => {
           mt={mt}
           color={color}
         >
-          IMAGE LAB presents the revolutionary transition between precision barbering and contemporary hairdressing.
+          {t("subTitleHome")}
         </Text>
       </Flex>
     </Box>

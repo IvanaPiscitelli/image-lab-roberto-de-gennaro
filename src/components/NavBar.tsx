@@ -9,6 +9,7 @@ import useScrollPosition from "../hooks/useScrollPosition";
 
 import logo from "../assets/logo-roberto.png";
 import logoBlack from "../assets/logo-roberto-black.png";
+import SwitchLang from "./SwitchLang";
 
 interface Props {
   backgroundColor: string;
@@ -41,7 +42,10 @@ const NavBar = ({ backgroundColor, colorText }: Props) => {
       zIndex={100}
     >
       <HStack px="30px" py="12px" justifyContent="space-between">
-        <LeftIcons color={colorIcon} />
+        <div>
+          <LeftIcons color={colorIcon} />
+          <SwitchLang />
+        </div>
 
         <Breadcrumb>
           <BreadcrumbItem>
