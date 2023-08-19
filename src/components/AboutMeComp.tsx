@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import NavBarBurger from "./NavBarBurger";
 import Footer from "./Footer";
 
-import firstImg from "../assets/about-me-1.webp";
+import firstImg from "../assets/aboutRoberto.png";
 import photoFounder from "../assets/photoFounder.jpeg";
 
 import { useTranslation } from "react-i18next";
@@ -39,7 +39,13 @@ const AboutMeComp = () => {
               </Box>
             </Box>
             <Box flex={1} p="15px">
-              <Box fontSize="15px" fontWeight={400} my="0" textAlign={{ base: "center", md: "left" }}>
+              <Box
+                fontSize="15px"
+                fontWeight={400}
+                my="0"
+                textAlign={{ base: "center", md: "left" }}
+                ml={{ md: "7em" }}
+              >
                 {t("subTitleAbout")}
               </Box>
             </Box>
