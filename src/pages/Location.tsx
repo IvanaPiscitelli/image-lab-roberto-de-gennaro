@@ -20,7 +20,7 @@ const Location = () => {
           <NavBarBurger />
         </Show>
       </GridItem>
-      <GridItem area="main" py={{ base: "100px", md: "150px" }}>
+      <GridItem area="main">
         <LocationComp />
       </GridItem>
       <GridItem area="footer" bg="black">
