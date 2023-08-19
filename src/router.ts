@@ -3,6 +3,7 @@ import App from "./pages/App";
 import AboutMe from "./pages/AboutMe";
 import PriceList from "./pages/PriceList";
 import NotFound from "./pages/NotFound";
+import Location from "./pages/Location";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
   {
     path: "/price-list",
     element: PriceList(),
+  },
+  {
+    path: "/location",
+    element: Location(),
   },
   {
     path: "*",
