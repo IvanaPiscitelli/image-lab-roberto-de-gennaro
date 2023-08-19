@@ -12,14 +12,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Box
-      as="footer"
-      role="contentinfo"
-      py="6"
-      h={{ base: "50vh", md: "40vh" }}
-      mt={{ base: "1.5em", md: "5em" }}
-      color="white"
-    >
+    <Box as="footer" role="contentinfo" py="6" h={{ base: "45vh", md: "30vh" }} mt={{ md: "5em" }} color="white">
       <Flex
         direction={{ base: "column", md: "row" }}
         maxW={{ base: "xl", sm: "xl", md: "7xl" }}
@@ -28,14 +21,14 @@ const Footer = () => {
         align="flex-start"
       >
         <Flex direction={{ base: "column", md: "row" }} align="flex-start" justify="space-evenly" w="full" wrap="wrap">
-          <Image src={logo} alt="logo" />
-          <Stack direction="column" mt={{ base: "5", md: "0" }}>
+          <Image src={logo} alt="logo" mb="1em" />
+          <Stack direction="column" mt={{ base: "20px", md: "0" }}>
             <Text fontSize="18px" fontWeight={800}>
               {t("followUs")}
             </Text>
             <SocialMediaList color="white" />
           </Stack>
-          <Stack direction="column" mt={{ base: "5", md: "0" }}>
+          <Stack direction="column" mt={{ base: "20px", md: "0" }}>
             <Text fontSize="18px" fontWeight={800}>
               {t("pages")}
             </Text>

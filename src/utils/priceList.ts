@@ -19,7 +19,7 @@ export const dummyPriceList: PriceList[] = [
       { id: 4, name: "BARBER MASK", amount: "5€" },
       { id: 5, name: "COLORE", amount: "15€" },
       { id: 6, name: "MECHES/SCHIARITURE", amount: "50€" },
-      { id: 7, name: "TOTAL BLONDE (ICE,PLATINUM)", amount: "da 60€ a 80€" },
+      { id: 7, name: "TOTAL BLONDE (ICE, PLATINUM)", amount: "da 60€ a 80€" },
       { id: 8, name: "HAIR TATTOO", amount: "da 5€ a 40€" },
     ],
   },

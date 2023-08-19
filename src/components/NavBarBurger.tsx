@@ -35,7 +35,7 @@ const NavBarBurger = () => {
       <HStack justifyContent="space-between" mx="10px">
         <LeftIcons color="white" />
         <Image src={logo} alt="logo" w="130px" h="46px" ml={1} p="5px" onClick={() => handleNavigate("/")} />
-        <Menu strategy="fixed" gutter={-1} onClose={onClose}>
+        <Menu strategy="fixed" gutter={-1}>
           <MenuButton
             as={IconButton}
             aria-label="Toggle"

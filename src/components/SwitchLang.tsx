@@ -10,17 +10,15 @@ const SwitchLang = () => {
   };
 
   return (
-    <div>
-      <FormControl display="flex" alignItems="center">
-        <FormLabel htmlFor="lang-toggle" mb="0">
-          IT
-        </FormLabel>
-        <Switch id="lang-toggle" isChecked={isEnglish} onChange={toggleLanguage} />
-        <FormLabel htmlFor="lang-toggle" mb="0" ml={2}>
-          EN
-        </FormLabel>
-      </FormControl>
-    </div>
+    <FormControl display="flex" alignItems="center">
+      <FormLabel htmlFor="lang-toggle" mb="0">
+        IT
+      </FormLabel>
+      <Switch id="lang-toggle" isChecked={isEnglish} onChange={toggleLanguage} />
+      <FormLabel htmlFor="lang-toggle" mb="0" ml={2}>
+        EN
+      </FormLabel>
+    </FormControl>
   );
 };
 

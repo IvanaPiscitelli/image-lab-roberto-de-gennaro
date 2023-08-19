@@ -1,38 +1,32 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import { dummyPriceList } from "../utils/priceList";
-import logo from "../assets/logo-roberto.png";
+import { Grid, GridItem, Hide, Show } from "@chakra-ui/react";
+import NavBar from "../components/NavBar";
+import NavBarBurger from "../components/NavBarBurger";
+import Footer from "../components/Footer";
+import PriceListComp from "../components/PriceListComp";
 
 const PriceList = () => {
   return (
-    <VStack bg="black" color="white" h="100%" pb="100px">
-      <Breadcrumb my="7px">
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">
-            <Image src={logo} alt="logo" />
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-      <Text m="10px">LISTINO PREZZI</Text>
-
-      <h1>
-        {dummyPriceList.map((person) => {
-          return (
-            <VStack key={person.name}>
-              <Heading mt={5}>{person.name}</Heading>
-              <Box textAlign="center">
-                {person.cuts.map((cut) => {
-                  return (
-                    <Text key={cut.id} lineHeight="32px">
-                      {cut.name} : {cut.amount}
-                    </Text>
-                  );
-                })}
-              </Box>
-            </VStack>
-          );
-        })}
-      </h1>
-    </VStack>
+    <Grid
+      templateAreas={{
+        base: `"nav" "main" "footer"`,
+        lg: `"nav nav" "main" "footer"`,
+      }}
+    >
+      <GridItem area="nav">
+        <Hide below="sm">
+          <NavBar backgroundColor="black" colorText="white" />
+        </Hide>
+        <Show below="sm">
+          <NavBarBurger />
+        </Show>
+      </GridItem>
+      <GridItem area="main" py={{ base: "100px", md: "150px" }}>
+        <PriceListComp />
+      </GridItem>
+      <GridItem area="footer" bg="black">
+        <Footer />
+      </GridItem>
+    </Grid>
   );
 };
 

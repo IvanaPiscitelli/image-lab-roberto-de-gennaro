@@ -99,7 +99,7 @@ const AboutMeComp = () => {
                   fontSize="15px"
                   textAlign={{ base: "center", md: "start" }}
                 >
-                  ROBERTO DE GENNARO
+                  {t("founderName")}
                 </Box>
                 <Box
                   fontWeight={600}
@@ -111,7 +111,7 @@ const AboutMeComp = () => {
                 >
                   {t("job")} – Crotone
                 </Box>
-                <Box textAlign={{ base: "center", md: "left" }}>
+                <Box textAlign={{ base: "center", md: "left" }} fontSize="15px">
                   {t("description1")}
                   <br />
                   <br />
@@ -133,18 +133,19 @@ const AboutMeComp = () => {
                   {t("description7")}
                 </Box>
               </Box>
-              <Box flex={1} p="15px">
+              <Box flex={1} p="15px" display="flex" alignItems="center" justifyContent="center">
                 <Image
                   src={photoFounder}
                   position="relative"
                   overflow="hidden"
                   display="inline-flex"
                   justifyContent="flex-start"
-                  maxWidth="100%"
+                  maxWidth={{ base: "85%", lg: "75%" }}
                   verticalAlign="middle"
                   opacity={1}
                   transition="opacity .3s"
                   w="100%"
+                  my={{ base: "10%", md: "5%", lg: "10%" }}
                 />
               </Box>
             </Box>

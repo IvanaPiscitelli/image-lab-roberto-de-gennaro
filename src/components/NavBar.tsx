@@ -42,10 +42,10 @@ const NavBar = ({ backgroundColor, colorText }: Props) => {
       zIndex={100}
     >
       <HStack px="30px" py="12px" justifyContent="space-between">
-        <div>
+        <HStack>
           <LeftIcons color={colorIcon} />
           <SwitchLang />
-        </div>
+        </HStack>
 
         <Breadcrumb>
           <BreadcrumbItem>
@@ -55,6 +55,7 @@ const NavBar = ({ backgroundColor, colorText }: Props) => {
                 alt="logo"
                 w={{ md: "135px", lg: "150px" }}
                 h={{ md: "45px", lg: "47px" }}
+                mr="6em"
                 onClick={() => navigate("/")}
               />
             </BreadcrumbLink>
