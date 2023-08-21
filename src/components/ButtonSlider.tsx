@@ -11,9 +11,9 @@ const BtnSlider = ({ direction, moveSlide }: Props) => {
   return (
     <button onClick={moveSlide} className={direction === "next" ? "btn-slide next" : "btn-slide prev"}>
       {direction === "next" ? (
-        <MdOutlineArrowForwardIos size={{ base: "19px", md: "30px" }} />
+        <MdOutlineArrowForwardIos size={{ base: "19px", md: "30px" }} color="black" />
       ) : (
-        <MdOutlineArrowBackIos size={{ base: "19px", md: "30px" }} />
+        <MdOutlineArrowBackIos size={{ base: "19px", md: "30px" }} color="black" />
       )}
     </button>
   );
