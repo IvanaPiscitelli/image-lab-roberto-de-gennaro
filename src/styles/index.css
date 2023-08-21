@@ -108,12 +108,13 @@ h3 {
   height: 60px;
   border-radius: 50%;
   background: transparent;
-  color: #d0d0d0;
+  color: black;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .prev {
