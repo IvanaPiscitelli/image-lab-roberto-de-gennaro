@@ -1,36 +1,21 @@
-import {
-  Box,
-  HStack,
-  IconButton,
-  Image,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  ScaleFade,
-  useDisclosure,
-  useOutsideClick,
-} from "@chakra-ui/react";
+import { Box, HStack, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, ScaleFade } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
+import SwitchLang from "./SwitchLang";
 
 import logo from "../assets/logo-roberto.png";
-import SwitchLang from "./SwitchLang";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
 const NavBarBurger = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-
-  // const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const handleNavigate = (path: string) => {
     navigate(path);
-    // onClose();
   };
 
   return (
