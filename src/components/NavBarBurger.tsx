@@ -9,6 +9,7 @@ import {
   MenuList,
   ScaleFade,
   useDisclosure,
+  useOutsideClick,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -19,15 +20,17 @@ import SocialMediaList from "./SocialMediaList";
 import logo from "../assets/logo-roberto.png";
 import SwitchLang from "./SwitchLang";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const NavBarBurger = () => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const { isOpen, onToggle, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const handleNavigate = (path: string) => {
     navigate(path);
-    onClose();
+    // onClose();
   };
 
   return (
@@ -35,18 +38,18 @@ const NavBarBurger = () => {
       <HStack justifyContent="space-between" mx="10px">
         <LeftIcons color="white" />
         <Image src={logo} alt="logo" w="130px" h="46px" ml={1} p="5px" onClick={() => handleNavigate("/")} />
-        <Menu strategy="fixed" gutter={-1}>
+        <Menu strategy="fixed" gutter={-1} onOpen={() => setIsOpen(true)} onClose={() => setIsOpen(false)}>
           <MenuButton
             as={IconButton}
             aria-label="Toggle"
             icon={
-              !isOpen ? (
-                <ScaleFade initialScale={0.9} in={!isOpen}>
-                  <HamburgerIcon style={{ fontSize: "25px" }} />
-                </ScaleFade>
-              ) : (
+              isOpen ? (
                 <ScaleFade initialScale={0.9} in={isOpen}>
                   <CloseIcon style={{ fontSize: "18px" }} />
+                </ScaleFade>
+              ) : (
+                <ScaleFade initialScale={0.9} in={!isOpen}>
+                  <HamburgerIcon style={{ fontSize: "25px" }} />
                 </ScaleFade>
               )
             }
@@ -54,7 +57,6 @@ const NavBarBurger = () => {
             color="white"
             mr="15px"
             colorScheme="transparent"
-            onClick={() => onToggle()}
           />
 
           <MenuList bg="black" w="100vw" borderStyle="none">
