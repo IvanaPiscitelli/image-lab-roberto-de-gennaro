@@ -54,7 +54,7 @@ const ParallaxBg2 = () => {
         >
           {t("titleProducts")}
         </Text>
-        <Text textAlign="right" ml={ml} mr={mr} fontSize="1.25em" lineHeight="1.4">
+        <Text textAlign={{ base: "center", md: "right" }} ml={ml} mr={mr} fontSize="1.25em" lineHeight="1.4">
           {t("subTitleProducts")}
         </Text>
       </div>
