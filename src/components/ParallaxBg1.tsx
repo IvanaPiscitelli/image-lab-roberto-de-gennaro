@@ -10,17 +10,15 @@ const ParallaxBg1 = () => {
   const bgImageConfig = {
     bgImage: useBreakpointValue({
       base: sfondoTestMobile,
-      sm: sfondoTestMobile,
       md: sfondoTest,
-      lg: sfondoTest,
     }),
     bgImagePosition: useBreakpointValue({
       base: "center center",
-      md: "",
+      md: "center center", // Made it consistent to ensure proper centering
     }),
     bgImageAttachment: useBreakpointValue({
-      base: "fixed",
-      md: "fixed",
+      base: "scroll", // Change from "fixed" to "scroll" for mobile
+      // md: "fixed",
     }),
     bgImageHeight: useBreakpointValue({
       base: "110vh",
