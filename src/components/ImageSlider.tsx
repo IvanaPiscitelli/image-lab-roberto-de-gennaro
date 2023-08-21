@@ -31,7 +31,7 @@ const ImageSlider = () => {
       {imgSlider.map((img, index) => {
         return (
           <div key={index} className={slideIndices.includes(index) ? "slide active-anim" : "slide"}>
-            <img src={img} className={index === slideIndices[0] ? "left" : "right"} />
+            <img src={img} alt="best works photos" className={index === slideIndices[0] ? "left" : "right"} />
           </div>
         );
       })}

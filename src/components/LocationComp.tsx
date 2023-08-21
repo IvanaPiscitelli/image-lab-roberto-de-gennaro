@@ -14,7 +14,7 @@ const LocationComp = () => {
 
       <Show above="md">
         <Box maxW="1400px" h="500px" mx="auto" overflow="hidden" p="40px">
-          <Image src={hero} objectFit="cover" w="100%" h="100%" />
+          <Image src={hero} alt="main photo of location" objectFit="cover" w="100%" h="100%" />
         </Box>
       </Show>
 
@@ -33,7 +33,7 @@ const LocationComp = () => {
               transition="all 0.2s"
               _hover={{ boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.7)" }}
             >
-              <Image src={location.url} />
+              <Image src={location.url} alt="location photos" />
             </Box>
           );
         })}

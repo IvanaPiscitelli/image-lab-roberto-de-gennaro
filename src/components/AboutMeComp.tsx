@@ -64,6 +64,7 @@ const AboutMeComp = () => {
               <Box flex={1} p="15px">
                 <Image
                   src={firstImg}
+                  alt="Roberto at work"
                   position="relative"
                   overflow="hidden"
                   display="inline-flex"
@@ -142,6 +143,7 @@ const AboutMeComp = () => {
               <Box flex={1} p="15px" display="flex" alignItems="center" justifyContent="center">
                 <Image
                   src={photoFounder}
+                  alt="Founder's photo"
                   position="relative"
                   overflow="hidden"
                   display="inline-flex"
