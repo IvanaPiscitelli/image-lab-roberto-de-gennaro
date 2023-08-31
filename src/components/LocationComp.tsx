@@ -2,7 +2,9 @@ import { Box, Image, SimpleGrid, Text, Link, Show } from "@chakra-ui/react";
 import { locationDummyList } from "../utils/locationDummyList";
 import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import hero from "../assets/hero1.png";
+// import hero from "../assets/hero1.png";
+import hero from "../assets/hero.jpg";
+// import hero from "../assets/heroNormal.jpeg";
 
 const LocationComp = () => {
   const { t } = useTranslation();
