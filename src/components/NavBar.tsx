@@ -1,12 +1,9 @@
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, HStack, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-
 import SocialMediaList from "./SocialMediaList";
 import LeftIcons from "./LeftIcons";
 import NavBarList from "./NavBarList";
-
 import useScrollPosition from "../hooks/useScrollPosition";
-
 import logo from "../assets/logo-roberto.png";
 import logoBlack from "../assets/logo-roberto-black.png";
 import SwitchLang from "./SwitchLang";

@@ -2,9 +2,7 @@ import { Box, Image, SimpleGrid, Text, Link, Show } from "@chakra-ui/react";
 import { locationDummyList } from "../utils/locationDummyList";
 import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
-// import hero from "../assets/hero1.png";
-import hero from "../assets/hero.jpg";
-// import hero from "../assets/heroNormal.jpeg";
+import hero from "../assets/hero.webp";
 
 const LocationComp = () => {
   const { t } = useTranslation();
@@ -35,7 +33,7 @@ const LocationComp = () => {
               transition="all 0.2s"
               _hover={{ boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.7)" }}
             >
-              <Image src={location.url} alt="location photos" />
+              <Image src={location.url} alt="location photos" loading="lazy" />
             </Box>
           );
         })}

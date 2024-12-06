@@ -1,13 +1,13 @@
 import { useState } from "react";
 import BtnSlider from "./ButtonSlider";
 
-import balayage from "../assets/balayage.jpeg";
-import taglioUomo0 from "../assets/taglio-uomo0.jpeg";
-import taglioUomo1 from "../assets/taglio-uomo1.jpeg";
-import taglioUomo2 from "../assets/taglio-uomo2.jpeg";
-import taglioUomo3 from "../assets/taglio-uomo3.jpeg";
-import taglioUomo4 from "../assets/taglio-uomo4.jpeg";
-import taglioUomo5 from "../assets/taglio-uomo5.jpeg";
+import balayage from "../assets/balayage.webp";
+import taglioUomo0 from "../assets/taglio-uomo0.webp";
+import taglioUomo1 from "../assets/taglio-uomo1.webp";
+import taglioUomo2 from "../assets/taglio-uomo2.webp";
+import taglioUomo3 from "../assets/taglio-uomo3.webp";
+import taglioUomo4 from "../assets/taglio-uomo4.webp";
+import taglioUomo5 from "../assets/taglio-uomo5.webp";
 import "../styles/index.css";
 
 const ImageSlider = () => {
@@ -31,7 +31,12 @@ const ImageSlider = () => {
       {imgSlider.map((img, index) => {
         return (
           <div key={index} className={slideIndices.includes(index) ? "slide active-anim" : "slide"}>
-            <img src={img} alt="best works photos" className={index === slideIndices[0] ? "left" : "right"} />
+            <img
+              src={img}
+              alt="best works photos"
+              className={index === slideIndices[0] ? "left" : "right"}
+              loading="lazy"
+            />
           </div>
         );
       })}

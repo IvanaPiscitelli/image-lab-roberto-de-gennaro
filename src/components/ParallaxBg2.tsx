@@ -1,8 +1,8 @@
 import { Parallax } from "react-parallax";
 import { useBreakpointValue, Text } from "@chakra-ui/react";
 
-import productsWhite from "../assets/productsWhite.png";
-import mobileProducts from "../assets/mobile-products.png";
+import productsWhite from "../assets/productsWhite.webp";
+import mobileProducts from "../assets/mobile-products.webp";
 import { useTranslation } from "react-i18next";
 
 const ParallaxBg2 = () => {

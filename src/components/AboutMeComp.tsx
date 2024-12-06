@@ -5,8 +5,8 @@ import NavBar from "./NavBar";
 import NavBarBurger from "./NavBarBurger";
 import Footer from "./Footer";
 
-import firstImg from "../assets/aboutRoberto.png";
-import photoFounder from "../assets/photoFounder.jpeg";
+import firstImg from "../assets/aboutRoberto.webp";
+import photoFounder from "../assets/photoFounder.webp";
 
 import { useTranslation } from "react-i18next";
 
@@ -144,6 +144,7 @@ const AboutMeComp = () => {
                 <Image
                   src={photoFounder}
                   alt="Founder's photo"
+                  loading="lazy"
                   position="relative"
                   overflow="hidden"
                   display="inline-flex"

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const PriceListComp = () => {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Box color="black">
       {dummyPriceList.map((person) => {
         return (
           <VStack key={person.name}>

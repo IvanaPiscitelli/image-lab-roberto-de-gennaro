@@ -3,11 +3,9 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-
 import LeftIcons from "./LeftIcons";
 import SocialMediaList from "./SocialMediaList";
 import SwitchLang from "./SwitchLang";
-
 import logo from "../assets/logo-roberto.png";
 
 const NavBarBurger = () => {
